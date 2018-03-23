@@ -75,7 +75,7 @@ function findById(data, id) {
 const app = express()
 app.use(cors())
 
-app.get('/', function(request, responst) {
+app.get('/', function(request, response) {
     response.json({data: instructors})
 })
 
