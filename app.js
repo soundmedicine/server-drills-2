@@ -31,7 +31,7 @@ let instructors = [{
     name: 'Chad Drummond',
     title: 'Instructor',
     numberOfDogs: 0
-} {
+}, {
     id: 7,
     name: 'Kim Schlesinger',
     title: 'Director of Instruction',
@@ -93,3 +93,4 @@ app.get('/:id', function(request, response) {
 })
 
 app.listen(process.env.PORT || 3000)
+console.log('listening on port: 3000')
