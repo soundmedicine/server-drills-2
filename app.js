@@ -79,18 +79,12 @@ app.get('/', function(request, response) {
     response.json({data: instructors})
 })
 
-app.get('/:id', function(request, response) {
-    let record = findById(instructors, request.params.id)
+app.use('/:id', function(request, response) {
+    let record = findById(cohorts, request.params.id)
     if (!record) {
-        response.status = 404
-        response.json({
-            error: {
-                message: 'No record found!'
-            }
-        })
+        response.status(404).send('No record found!')
     }
     response.json({data: record})
 })
 
 app.listen(process.env.PORT || 3000)
-console.log('listening on port: 3000')
