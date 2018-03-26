@@ -80,7 +80,7 @@ app.get('/', function(request, response) {
 })
 
 app.use('/:id', function(request, response) {
-    let record = findById(cohorts, request.params.id)
+    let record = findById(instructors, request.params.id)
     if (!record) {
         response.status(404).send('No record found!')
     }
